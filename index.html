@@ -1,27 +1,55 @@
-8<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Вкасание</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вксание</title>
 
-<style>
-    <body>
-        <video autoplay muted loop playsinline id="bg-video">
-    <source src="video.mp4" type="video/mp4">
-</video>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-<style>
-    #bg-video {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1;
-        object-fit: cover;
-        filter: brightness(0.6);
-    }
-</style>
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            color: white;
+            font-size: 22px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+        💠🅱️ 🅺🅰️🅲🅰️🅷🆄🅴💠 <br>
+        Зелёный свет тебе горит 🎁 <br>
+        Снимай своё сокровище... 🎁 <br><br>
+        🌐 ПРИЯТНОГО ❤ ОТДЫХА 🌐
+        <br><br>
+        👇 НАШИ КОНТАКТЫ 👇
+    </div>
+
+</body>
+</html>
