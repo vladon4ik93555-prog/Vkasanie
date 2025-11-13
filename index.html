@@ -1,102 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>В КАСАНИЕ</title>
+  <title>VKасание</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      height: 100vh;
-      overflow: hidden;
-      font-family: "Segoe UI", sans-serif;
-      color: #ffd700;
+      margin: 0;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
       text-align: center;
-      background-color: #000;
     }
-
     video {
-      position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
+      height: auto;
     }
-
-    .overlay {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
-      padding: 0 10px;
-    }
-
-    h1, p {
-      margin: 8px 0;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     .contacts {
-      position: absolute;
-      bottom: 25px;
-      width: 100%;
-      text-align: center;
-      font-size: 18px;
+      margin-top: 20px;
+      font-size: 20px;
       line-height: 1.6;
     }
-
-    .contacts a {
-      color: #ffd700;
+    a {
+      color: #00aaff;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .contacts a:hover {
-      color: white;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop playsinline>
-    <source src="https://files.fm/u/sqfzt8x2dc" type="video/mp4">
-  </video>
 
-  <div class="overlay">
-    <h1>⬇️|В КАСАНИЕ|⬇️</h1>
-    <p>Зелёный свет, тебе горит</p>
-    <p>🎁Снимай своё сокровище...🎁</p>
-    <p>🌐ПРИЯТНОГО❤ОТДЫХА🌐</p>
-    <p>🥄🥄🥄🥄🥄🥄🥄🥄🥄🥄🥄</p>
-    <p>𝔹𝕐𝔻𝔾𝕆𝕊ℤℂ, 𝕎𝔸ℝ𝕊ℤ𝔸𝕎𝔸,<br>
-       𝕎ℝ𝕆ℂ𝕃𝔸𝕎, 𝕂ℝ𝔸𝕂𝕆𝕎,<br>
-       ℝℤ𝔼𝕊ℤ𝕆𝕎, 𝕂𝔸𝕋𝕆𝕎𝕀ℂ𝔼,<br>
-       𝕃𝕆𝔻ℤ, 𝔾𝔻𝔸ℕ𝕊𝕂.</p>
-    <p>🦀🦀🦀🦀🦀🦀🦀🦀🦀</p>
-  </div>
+  <video src="video.mp4" autoplay loop muted playsinline></video>
 
   <div class="contacts">
-    <p>🪬 <a href="#">CHAT-BKACAHUE</a> 🪬</p>
-    <p>🆕 <a href="#">NEWS-BKACAHUE</a> 🆕</p>
-    <p>⚡ <a href="#">REVIEWS</a> ⚡</p>
-    <p>📦 Опт/Работа 🧰:
-      <a href="https://t.me/wkasanie_administrator">@wkasanie_administrator</a>
-    </p>
+    🪬 <a href="https://t.me/CHAT_BKACAHUE">CHAT-BKACAHUE</a> 🪬<br>
+    🆕 <a href="https://t.me/NEWS_BKACAHUE">NEWS-BKACAHUE</a> 🆕<br>
+    ⚡ <a href="https://t.me/reviews">REVIEWS</a> ⚡<br><br>
+    📦 Опт / Работа 🧰:<br>
+    <a href="https://t.me/wkasanie_administrator">@wkasanie_administrator</a>
   </div>
+
 </body>
 </html>
