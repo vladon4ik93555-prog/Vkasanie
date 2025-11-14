@@ -1,79 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Визитка</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vkasanie</title>
 
-    <style>
-        /* Видео на заднем фоне */
-        #bg-video {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            filter: blur(3px) brightness(0.7);
-        }
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: white;
+        background: black;
+    }
 
-        /* Центрированный блок */
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            animation: fadeIn 1.5s ease forwards;
-            opacity: 0;
-        }
+    /* Фон-видео */
+    video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: blur(4px) brightness(0.5);
+    }
 
-        h1 {
-            font-size: 40px;
-            margin: 0 0 10px;
-            animation: slideDown 1.5s ease forwards;
-            opacity: 0;
-        }
+    .description {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        padding: 0 20px;
+        backdrop-filter: blur(10px);
+    }
 
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            animation: slideUp 1.8s ease forwards;
-            opacity: 0;
-        }
+    .btn {
+        padding: 15px 35px;
+        font-size: 20px;
+        border: none;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+        transition: 0.3s;
+        margin-bottom: 15px;
+    }
+    .btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid white;
-            border-radius: 12px;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            backdrop-filter: blur(4px);
-            transition: 0.3s;
-            animation: fadeBtn 2s ease forwards;
-            opacity: 0;
-        }
+    #contacts {
+        display: none;
+        margin-top: 20px;
+        font-size: 20px;
+        animation: fade 0.4s ease;
+    }
 
-        .btn:hover {
-            background: rgba(255,255,255,0.3);
-            transform: scale(1.05);
-        }
+    @keyframes fade {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
 
-        /* Анимации */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideDown {
-            0% { transform: translateY(-30px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes slideUp {
+<body>
+
+<!-- ВИДЕО ФОН -->
+<video autoplay muted loop>
+    <source src="public.mp4" type="video/mp4">
+</video>
+
+<div class="description">
+    📦 ОПТ / СОТРУДНИЧЕСТВО 🧰 <br>
+    ⚙️ @wkasanie_administrator ⚙️
+</div>
+
+<button class="btn" onclick="showContacts()">Контакты</button>
+
+<div id="contacts">
+    📞 Telegram: @wkasanie_administrator
+</div>
+
+<script>
+function showContacts() {
+    document.getElementById("contacts").style.display = "block";
+}
+</script>
+
+</body>
+</html>
