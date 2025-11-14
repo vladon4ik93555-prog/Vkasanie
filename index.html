@@ -1,50 +1,79 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Вкасание</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Визитка</title>
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
+    <style>
+        /* Видео на заднем фоне */
+        #bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            filter: blur(3px) brightness(0.7);
+        }
 
-    #bg-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: 1;
-        object-fit: cover;
-        filter: brightness(0.6);
-    }
+        /* Центрированный блок */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            animation: fadeIn 1.5s ease forwards;
+            opacity: 0;
+        }
 
-    .content {
-        position: relative;
-        z-index: 10;
-        color: white;
-        font-size: 30px;
-        text-align: center;
-        padding-top: 40vh;
-    }
-</style>
-</head>
+        h1 {
+            font-size: 40px;
+            margin: 0 0 10px;
+            animation: slideDown 1.5s ease forwards;
+            opacity: 0;
+        }
 
-<body>
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            animation: slideUp 1.8s ease forwards;
+            opacity: 0;
+        }
 
-<video autoplay muted loop playsinline id="bg-video">
-    <source src="video.mp4" type="video/mp4">
-</video>
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid white;
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            backdrop-filter: blur(4px);
+            transition: 0.3s;
+            animation: fadeBtn 2s ease forwards;
+            opacity: 0;
+        }
 
-<div class="content">
-    Привет
-</div>
+        .btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
 
-</body>
-</html>
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideDown {
+            0% { transform: translateY(-30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideUp {
