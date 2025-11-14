@@ -5,28 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вкасание</title>
 
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
 
-        #bg-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-            object-fit: cover;
-            filter: brightness(0.6);
-        }
+    #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        object-fit: cover;
+        filter: brightness(0.6);
+    }
 
-        .content {
-            position: relative;
-            z-index: 10;
-            color: white;
-            font-size:
+    .content {
+        position: relative;
+        z-index: 10;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 40vh;
+    }
+</style>
+
+</head>
+<body>
+
+<video autoplay muted loop playsinline id="bg-video">
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+    Привет
+</div>
+
+</body>
+</html>
